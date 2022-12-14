@@ -10,7 +10,7 @@ import com.firstapiadriano.entities.User;
 import com.firstapiadriano.repositories.UserRepository;
 
 @Service
-public class UserServices {
+public class UserService {
 	
 	@Autowired
 	private UserRepository repository;
@@ -20,8 +20,8 @@ public class UserServices {
 	}
 	
 	public User findById(Long id) {
-	 	Optional<User> onj = repository.findById(id);
-	 	return onj.get();
+	 	Optional<User> obj = repository.findById(id);
+	 	return obj.get();
 	}
 
 }
